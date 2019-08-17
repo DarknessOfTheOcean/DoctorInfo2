@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/person_id"
+      android:icon="@drawable/ic_person"
+      android:title="you"
+      android:orderInCategory="2"
+      />
+    <item
+        android:id="@+id/doctor_id"
+        android:icon="@drawable/ic_people"
+        android:title="doctors"
+        android:orderInCategory="1"
+        />
+
+
+
+</menu>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1084679312165",
+    "firebase_url": "https://doctorinfo2-c79ab.firebaseio.com",
+    "project_id": "doctorinfo2-c79ab",
+    "storage_bucket": "doctorinfo2-c79ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084679312165:android:6129ea891ab92ea5",
+        "android_client_info": {
+          "package_name": "com.abc.doctorinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084679312165-ltf9kadebs5ijhk1klh5q1hle09kq3hs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abc.doctorinfo",
+            "certificate_hash": "a6016a5c2863ee98d0a38f2fdbcf6e38a2368499"
+          }
+        },
+        {
+          "client_id": "1084679312165-a08b6c9re8mpvi79vdinb26jfl04ocn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAGHTq8e4aHCIBQjpytEZFmYwPtX0C604"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084679312165-a08b6c9re8mpvi79vdinb26jfl04ocn7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
