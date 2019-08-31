@@ -3,6 +3,7 @@ package com.abc.doctorinfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -49,7 +50,7 @@ public class doctorsFragment extends Fragment {
         userReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               String name,speciality,location,email;
+               String name,speciality,location,email,timing,clinic,phone;
                int Rating;
                int id=0;
                for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
@@ -58,16 +59,19 @@ public class doctorsFragment extends Fragment {
                     speciality=(String)childDataSnapshot.child("speciality").getValue();
                     location=(String)childDataSnapshot.child("location").getValue();
                     email=(String)childDataSnapshot.child("email").getValue();
-                   Log.i(TAG, "onDataChange: "+location + GlobalVariable.selectedCity);
+                    timing=(String)childDataSnapshot.child("datetime").getValue();
+                    clinic=(String)childDataSnapshot.child("clinic").getValue();
+                    phone=(String)childDataSnapshot.child("phone").getValue();
+                    Log.i(TAG, "onDataChange: "+location + GlobalVariable.selectedCity);
                    if(!GlobalVariable.selectedCity.equals("all"))
                    {
                        if (GlobalVariable.selectedCity.equals(location))
                        {
-                           doctorList.add(new doctor(id,name,speciality,4.3,email,R.drawable.docto,location));
+                           doctorList.add(new doctor(id,name,speciality,4.3,email,R.drawable.docto,location,timing,clinic,phone));
                        }
                    }
                    else {
-                       doctorList.add(new doctor(id, name, speciality, 4.3, email, R.drawable.docto, location));
+                       doctorList.add(new doctor(id, name, speciality, 4.3, email, R.drawable.docto, location,timing,clinic,phone));
                    }
                    adapter.notifyDataSetChanged();
                 }
@@ -77,6 +81,17 @@ public class doctorsFragment extends Fragment {
 
             }
         });
+
+
+
+
+
+
+
+
+
+
+
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
          adapter.notifyDataSetChanged();

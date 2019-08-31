@@ -45,7 +45,7 @@ public class profileFragment extends Fragment {
         editTextName=view.findViewById(R.id.profileName);
         editTextCity=view.findViewById(R.id.textViewCity);
         editTextEmail=view.findViewById(R.id.textViewEmail);
-        editTextMobile=view.findViewById(R.id.textViewMobileNo);
+        editTextMobile=view.findViewById(R.id.textViewPhone);
 
 
           FirebaseDatabase  database=FirebaseDatabase.getInstance();

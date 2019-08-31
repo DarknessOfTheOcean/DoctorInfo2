@@ -1,10 +1,14 @@
 package com.abc.doctorinfo;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -41,7 +45,7 @@ public class doctorAdapter extends RecyclerView.Adapter <doctorAdapter.doctorVie
     @Override
     public void onBindViewHolder(@NonNull doctorViewHolder holder, int position) {
         //getting the product of the specified position
-        doctor dct = doctorList.get(position);
+        final doctor dct = doctorList.get(position);
 
         //binding the data with the viewholder views
         holder.textViewName.setText(dct.getName());
@@ -50,6 +54,20 @@ public class doctorAdapter extends RecyclerView.Adapter <doctorAdapter.doctorVie
         holder.textViewEmail.setText(String.valueOf(dct.getEmail()));
         holder.textViewLocation.setText(String.valueOf(dct.getLocation()));
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(dct.getImage()));
+        holder.relative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mCtx,DoctorProfileDisplay.class);
+                intent.putExtra("name",dct.getName());
+                intent.putExtra("city",dct.getLocation());
+                intent.putExtra("speciality",dct.getSpeciality());
+                intent.putExtra("clinic",dct.getClinic());
+                intent.putExtra("phone",dct.getPhoneno());
+                intent.putExtra("email",dct.getEmail());
+                intent.putExtra("timing",dct.getTimings());
+                mCtx.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -62,6 +80,7 @@ public class doctorAdapter extends RecyclerView.Adapter <doctorAdapter.doctorVie
 
         TextView textViewName, textViewSpeciality, textViewRating, textViewEmail,textViewLocation;
         ImageView imageView;
+        RelativeLayout relative;
 
         public doctorViewHolder(View itemView) {
             super(itemView);
@@ -72,13 +91,12 @@ public class doctorAdapter extends RecyclerView.Adapter <doctorAdapter.doctorVie
             textViewEmail = itemView.findViewById(R.id.textViewPrice);
             imageView = itemView.findViewById(R.id.imageView);
             textViewLocation=itemView.findViewById(R.id.textViewLocation);
+            relative=itemView.findViewById(R.id.itemRelative);
         }
     }
 
 
 
-
-
-
-
 }
+
+
