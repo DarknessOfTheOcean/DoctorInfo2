@@ -69,6 +69,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10sp"
+
                 android:background="@drawable/city"/>
             <TextView
                 android:layout_width="fill_parent"
@@ -76,7 +77,8 @@
                 android:layout_margin="5dp"
                 android:background="#fff"
                 android:clickable="true"
-                android:elevation="4dp"
+                android:textColor="#000000"
+                android:elevation="2dp"
                 android:id="@+id/textViewDoctorCity"
                 android:padding="20dp"
                 android:text="City" />
@@ -91,6 +93,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+
                     android:layout_marginLeft="10sp"
                     android:background="@drawable/ic_airline_seat_flat_angled_black_24dp"/>
 
@@ -102,7 +105,8 @@
                     android:layout_margin="5dp"
                     android:background="#fff"
                     android:clickable="true"
-                    android:elevation="4dp"
+                    android:textColor="#000000"
+                    android:elevation="2dp"
                     android:id="@+id/textViewDoctorSpeciality"
                     android:padding="20dp"
                     android:text="speciality" />
@@ -115,6 +119,7 @@
                 <ImageButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+
                     android:layout_gravity="center"
                     android:layout_marginLeft="10sp"
                     android:background="@drawable/ic_add_circle_black_24dp"/>
@@ -127,7 +132,8 @@
                     android:layout_margin="5dp"
                     android:background="#fff"
                     android:clickable="true"
-                    android:elevation="4dp"
+                    android:textColor="#000000"
+                    android:elevation="2dp"
                     android:id="@+id/textViewDoctorClinic"
                     android:padding="20dp"
                     android:text="sarada clinic" />
@@ -141,6 +147,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+
                     android:layout_marginLeft="10sp"
                     android:background="@drawable/call"/>
 
@@ -150,9 +157,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:textColor="#000000"
                     android:background="#fff"
                     android:clickable="true"
-                    android:elevation="4dp"
+                    android:elevation="2dp"
                     android:id="@+id/textViewDoctorPhone"
                     android:padding="20dp"
                     android:text="Phone" />
@@ -165,6 +173,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+
                     android:layout_marginLeft="10sp"
                     android:background="@drawable/ic_email_black_24dp"/>
 
@@ -177,7 +186,8 @@
                     android:layout_marginBottom="3dp"
                     android:background="#fff"
                     android:clickable="true"
-                    android:elevation="4dp"
+                    android:elevation="2dp"
+                    android:textColor="#000000"
                     android:padding="20dp"
                     android:text="Email" />
             </LinearLayout>
@@ -192,6 +202,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+
                     android:layout_marginLeft="10sp"
                     android:background="@drawable/ic_access_time_black_24dp"/>
 
@@ -203,13 +214,30 @@
                     android:layout_margin="5dp"
                     android:background="#fff"
                     android:clickable="true"
-                    android:elevation="4dp"
+                    android:elevation="2dp"
+                    android:textColor="#000000"
                     android:id="@+id/textViewDoctorTimings"
                     android:padding="20dp"
                     android:text="Timings" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="43dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:id="@+id/whatsAppChatBtn"
+                    android:textAlignment="center"
+                    android:text="Lets Chat(Whats App)"/>
+            </LinearLayout>
 
         </LinearLayout>
+
+
     </RelativeLayout>
 
 </ScrollView>

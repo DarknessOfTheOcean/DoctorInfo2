@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About The app:"
+            android:textSize="25sp"
+            android:padding="15sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15sp"
+            android:elevation="3sp"
+            android:text="This app is under development. This app serves doctors information to  all its users.Firebase is udes to handle the database and authentication. To report a bug please contact us here:
+            parthadebnath68@gmail.com"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:padding="15sp"
+            android:text="About The Developer:"
+            android:textSize="25sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="81dp"
+            android:src="@drawable/index"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15sp"
+            android:elevation="3sp"
+            android:text="Hi i am Partha Debnath ,the developer of this application. I am a computer science engineer
+            Email:parthadebnath68@gmail.com
+         "
+            />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:autoLink="web"
+           android:linksClickable="true"
+           android:textAlignment="center"
+           android:padding="15sp"
+           android:text="https://github.com/DarknessOfTheOcean"/>
+
+    </LinearLayout>
+
+</LinearLayout>

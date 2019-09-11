@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.abc.doctorinfo">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:name=".FirebaseHandler"
         android:allowBackup="true"
@@ -24,7 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DoctorProfileDisplay"></activity>
+        <activity android:name=".DoctorProfileDisplay" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

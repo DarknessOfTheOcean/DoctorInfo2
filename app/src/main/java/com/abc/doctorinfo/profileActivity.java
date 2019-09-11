@@ -146,7 +146,7 @@ String TAG="something";
 
         switch(item.getItemId()){
             case R.id.menuAbout:
-                Toast.makeText(this, "You clicked about", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(),AboutActivity.class));
                 break;
 
             case R.id.menuSettings:
@@ -159,11 +159,6 @@ String TAG="something";
                 Toast.makeText(getApplicationContext(), "successfully signed out", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(),signInActivity.class));
                 finish();
-
-
-
-
-                Toast.makeText(this, "You clicked logout", Toast.LENGTH_SHORT).show();
                 break;
 
         }
